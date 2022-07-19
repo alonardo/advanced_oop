@@ -94,22 +94,19 @@ time.sleep(.5)
 
 
 employees = [andre, nick, marcus]
-print(employees.sort())
 
-# Not currently functional, here's my debuggin thought process
+# Sorting is not currently functional, here's my debugging thought process
+print(sorted(employees))
 # What is the data type of employees? - list
 print(type(employees))
-#What is the data type of the individual employees inside the list of employees?
+
+#What is the data type of the individual employees inside the list of employees? '__main__'
 print(type(employees[0]))
-
-
-
-# print(sorted(employees))
 
 print('********************************')
 
 customers = [peanut, furiosa, luigi]
+# Sorting is not currently functional- see notes above
 print(sorted(customers))
-# Not currently functional
 # print(sorted(employees))
 
