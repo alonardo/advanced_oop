@@ -27,6 +27,22 @@ class User():
     def __hash__(self):
         return hash(self.email + self.created_on.strftime("%c"))
 
+    def __eq__(self, __o):                                                         
+        return self.created_on == __o.created_on
+    
+    def __lt__(self, __o):
+        return self.created_on < __o.created_on
+
+    def __gt__(self, __o):
+        return self.created_on > __o.created_on
+
+    def __le__(self, __o):
+        return self.created_on <= __o.created_on
+
+    def __ge__(self, __o):
+        return self.created_on >= __o.created_on 
+    
+
 class Employee(User):
     def __init__(self, first_name, last_name, email, home_address, security_level, department):
         super().__init__(first_name, last_name, email)
@@ -94,19 +110,9 @@ time.sleep(.5)
 
 
 employees = [andre, nick, marcus]
-
-# Sorting is not currently functional, here's my debugging thought process
 print(sorted(employees))
-# What is the data type of employees? - list
-print(type(employees))
-
-#What is the data type of the individual employees inside the list of employees? '__main__'
-print(type(employees[0]))
 
 print('********************************')
 
 customers = [peanut, furiosa, luigi]
-# Sorting is not currently functional- see notes above
 print(sorted(customers))
-# print(sorted(employees))
-
